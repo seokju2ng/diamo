@@ -43,7 +43,7 @@
         width:520px;
       }
     }
-    a img{
+    div font a img{
       height:25px;
       width:25px;
     }
@@ -54,7 +54,10 @@
       <a href="../index.html" class="logo_view">DIAMO</a>
       <input type="text" class="searchbar" placeholder="아이템 명 혹은 룬 검색">
       <a href="../view.html"><input type="button" class="searchbtn" value="검색"></a>
-      <a href="../view_menu.html"><img src="../../img/menubtn.png" class="menubtn"></a>
+      <div id="menubar">
+        <img src="../../img/menubtn.png" class="menubtn" onclick="menu()">
+      </div>
+      <script type="text/javascript" src="../../js/menu_info.js"></script>
     </div>
     <a href="../view_set.html"><button>뒤로 가기</button></a>
     <div class="grid-container">
