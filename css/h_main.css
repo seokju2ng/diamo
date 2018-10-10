@@ -55,14 +55,16 @@ li{
   margin: 20px;
 }
 
-#menubar{
+#menu_on{
   background-color: #CCCCCC;
   position: absolute;
   right: 0;
   top:0;
   width: 200px;
-  height: 500px;
+  height: 400px;
 }
+
+
 #grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
