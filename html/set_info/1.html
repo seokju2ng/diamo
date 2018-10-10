@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <title> DIAMO - 세트아이템 상세정보 </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../css/h_main.css">
+  </head>
+  <style>
+    .item1 {grid-area: name;}
+    .item2 {grid-area: material;}
+    .item3 {grid-area: img;}
+    .item4 {grid-area: op_1;}
+    .item5 {grid-area: setname;}
+    .item6 {grid-area: anth_set;}
+    .item7 {grid-area: set_op;}
+    .grid-container{
+      width: 650px;
+      display: grid;
+      grid-template-areas:
+        'name op_1'
+        'img op_1'
+        'material op_1'
+        'setname set_op'
+        'anth_set set_op'
+        ;
+      grid-gap: 8px;
+      background-color: #55bb00;
+      padding: 8px;
+    }
+    .grid-container > div{
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 15px;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    @media(max-width:700px){
+      .grid-container{
+        width:90%;
+      }
+    }
+    @media(max-width:600px){
+      .grid-container{
+        width:520px;
+      }
+    }
+    a img{
+      height:25px;
+      width:25px;
+    }
+  </style>
+
+  <body>
+    <div id="topbar">
+      <a href="../index.html" class="logo_view">DIAMO</a>
+      <input type="text" class="searchbar" placeholder="아이템 명 혹은 룬 검색">
+      <a href="../view.html"><input type="button" class="searchbtn" value="검색"></a>
+      <a href="../view_menu.html"><img src="../../img/menubtn.png" class="menubtn"></a>
+    </div>
+    <a href="../view_set.html"><button>뒤로 가기</button></a>
+    <div class="grid-container">
+      <div class="item1"><b>이름</b><br>탈 라샤의 호라드릭 크레스트</div>
+      <div class="item2"><b>원재료</b><br>데스마스크</div>
+      <div class="item3"><img src="../../img/set/tal_mask.gif" style="width:80px"></div>
+      <div class="item4"><b>옵션</b><br><br>
+        방어: 99-131 (변함) (기본 방어: 54-86)<br>
+        착용 가능한 레벨: 66<br>
+        착용 가능한 힘: 55<br>
+        내구력: 20<br><br>
+        <font color="blue">
+        10% 마나 획득(공격 명중시)<br>
+        10% 라이프 획득(공격 명중시)<br>
+        +45 방어<br>
+        +60 라이프<br>
+        +30 마나<br>
+        모든 저항력 +15</font>
+        </div>
+      <div class="item5"><b>세트명</b><br>탈 라샤의 래핑스</div>
+      <div class="item6"><font size="4">
+        <a href='2.html'><img src="../../img/set/tal_gab.gif">탈 라샤의 가디언쉽</a><br><br>
+        <a href='3.html'><img src="../../img/set/tal_bong.gif">탈 라샤의 리드리스 아이</a><br><br>
+        <a href='4.html'><img src="../../img/set/tal_amul.gif">탈 라샤의 어쥬디케이션</a><br><br>
+        <a href='5.html'><img src="../../img/set/tal_belt.gif">탈 라샤의 파인-스펀 클로쓰</a>
+      </font>
+        </div>
+      <div class="item7"><b>세트 옵션</b><br>
+        <font color="#996600">
+        <b>부분 세트 보너스</b><br>
+        라이프 회복 +10 (2 아이템)<br>
+        65% 매직 아이템 얻을 확률 증가 (3 아이템)<br>
+        +25% 매우 빠른 회복속도 증가 (4 아이템)<br>
+        <b>완성 세트 보너스</b><br>
+        +3 모든 소서리스 스킬 레벨 상승<br>
+        +25% 매우 빠른 회복속도 증가<br>
+        +150 방어<br>
+        +50 원거리 공격 방어<br>
+        +150 라이프<br>
+        라이프 회복 +10<br>
+        모든 저항력 +50<br>
+        65% 매직 아이템 얻을 확률 증가<br></font></div>
+    </div>
+  </body>
+</html>

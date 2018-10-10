@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <title> DIAMO - 룬워드 </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/h_main.css">
+  </head>
+  <style>
+    table{
+      text-align: center;
+    }
+    button{
+      font-size: 15px;
+    }
+    th{
+      width:110px;
+    }
+  </style>
+  <script>
+    window.onload = function(){
+      var rune_table = document.getElementById('rune');
+      var name = [["걸", 4, 0, "대거",0], ["더 디글러", 11, 0, "더크",0], ["아사달의 단도", 19, 0, "크리스",0], ["스펙트럴 샤드", 25, 0, "블레이드",0], ["스파인리퍼", 32, 0, "포이나드", 1], ["하트 카버", 36, 0, "런들", 1], ["블랙보그의 샤프", 38, 0, "싱쿠디아", 1], ["스톰스파이크", 41, 0, "스틸레또", 1], ["위저드스파이크", 61, 0, "본 나이프", 2], ["고스트플레임", 66, 0, "레전드 스파이크", 2], ["플레쉬리퍼", 68, 0, "팽드 나이프", 2], ["펠오크", 3, 0, "클럽", 0], ["스타우트네일", 5, 0, "스파이크클럽", 0], ["크러쉬플랜지", 9, 0, "메이스", 0], ["블러드라이즈", 15, 0, "모닝스타", 0], ["치우천왕의 철퇴", 21, 0, "프레일", 0], ["아이언스톤", 27, 0, "워해머", 0], ["본스냅",24,1,"마울",0], ["스틸드라이버",29,1,"그레이트마울",0], ["다크 클랜 크러셔",34,0,"커절",1], ["플레쉬렌더",38,0,"바브드클럽",1], ["수어쉬릴 프로스트",39,0,"플랜지드메이스",1], ["문폴",42,0,"재기드스타",1], ["어스퀘이커",43,0,"배틀해머",1], ["배질의 보어텍스",45,0,"나우트",1], ["게벌 오브 페인",45,1,"마르텔 드페르",1], ["블러드트리 스텀프",48,1,"워클럽",1]];
+      var category = ["한손무기", "두손무기"];
+      var rate = ["노멀", "익셉셔널", "엘리트"];
+      if(rune_table.rows.length === 0){
+        for(var i = 0; i < name.length; i++){
+          var row = rune_table.insertRow(rune_table.rows.length);
+          var cell1 = row.insertCell(0);
+          var cell2 = row.insertCell(1);
+          var cell3 = row.insertCell(2);
+          var cell4 = row.insertCell(3);
+          var cell5 = row.insertCell(4);
+          var cell6 = row.insertCell(5);
+          cell1.innerHTML = name[i][1];
+          cell2.innerHTML = name[i][0];
+          cell3.innerHTML = rate[name[i][4]];
+          cell4.innerHTML = category[name[i][2]];
+          cell5.innerHTML = name[i][3];
+          cell6.innerHTML = "<a href='uniq_info.html'><button style='background-color:#00bbbb'>정보 보기</button></a>";
+        }
+      }
+      document.getElementById('result').innerHTML = "총 검색결과 "+i+"건";
+    }
+  </script>
+  <body>
+    <div id="topbar">
+      <a href="index.html" class="logo_view">DIAMO</a>
+      <input type="text" class="searchbar" placeholder="아이템 명 혹은 룬 검색">
+      <a href="view.html"><input type="button" class="searchbtn" value="검색"></a>
+      <a href="view_menu.html"><img src="../img/menubtn.png" class="menubtn"></a>
+    </div>
+    <label id="result"></label>
+    <table>
+      <tr>
+        <th>레벨제한</th>
+        <th style="width:180px">아이템 이름</th>
+        <th>등급</th>
+        <th>부위</th>
+        <th>재료</th>
+        <th>상세정보</th>
+      </tr>
+      <tbody id="rune"></tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <title> DIAMO - 유니크 상세정보 </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/h_main.css">
+  </head>
+  <style>
+    .item1 {grid-area: name;}
+    .item2 {grid-area: category;}
+    .item3 {grid-area: material;}
+    .item4 {grid-area: option;}
+    .item5 {grid-area: img;}
+
+    .grid-container{
+      width: 650px;
+      display: grid;
+      grid-template-areas:
+        'name option'
+        'material option'
+        'img option'
+        'category option';
+      grid-gap: 8px;
+      background-color: #ffbb00;
+      padding: 8px;
+    }
+    .grid-container > div{
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 15px;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    @media(max-width:700px){
+      .grid-container{
+        width:90%;
+      }
+    }
+    @media(max-width:600px){
+      .grid-container{
+        width:520px;
+      }
+    }
+    .rune{
+      width:30px;
+    }
+  </style>
+
+  <body>
+    <div id="topbar">
+      <a href="index.html" class="logo_view">DIAMO</a>
+      <input type="text" class="searchbar" placeholder="아이템 명 혹은 룬 검색">
+      <a href="view.html"><input type="button" class="searchbtn" value="검색"></a>
+      <a href="view_menu.html"><img src="../img/menubtn.png" class="menubtn"></a>
+    </div>
+    <a href="view_runewords.html"><button>뒤로 가기</button></a>
+    <div class="grid-container">
+      <div class="item1"><b>이름</b><br>하트 카버</div>
+      <div class="item2"><b>부위</b><br>한손 무기</div>
+      <div class="item3"><b>재료 아이템</b><br>런들</div>
+      <div class="item4"><b>옵션</b><br><br>
+        한손 데미지: (44-49) - (110-123) (평균 77 - 86)<br>
+        착용 가능한 레벨: 36<br>
+        착용 가능한 힘: 25<br>
+        착용 가능한 민첩성: 58<br>
+        내구력: 20<br>
+        기본 무기 속도: 0<br><br>
+        <font color="blue">
+        +190~240% 증가된 데미지 (변함)<br>
+        15~35 데미지 추가<br>
+        목표물의 방어력 무시<br>
+        35% 치명적 공격<br>
+        +4 그림 워드 (바바리안 전용)<br>
+        +4 파인드 포션 (바바리안 전용)<br>
+        +4 파인드 아이템 (바바리안 전용)</font></div>
+      <div class="item5"><img src="../img/uniq/diggler.gif"></div>
+    </div>
+  </body>
+</html>

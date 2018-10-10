@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <title> DIAMO - 세트 아이템 </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/h_main.css">
+  </head>
+  <style>
+    table{
+      text-align: center;
+    }
+    td img{
+      height:50px;
+      width:50px;
+    }
+    button{
+      font-size: 15px;
+    }
+    th{
+      width:280px;
+    }
+  </style>
+  <script>
+    window.onload = function(){
+      var rune_table = document.getElementById('rune');
+      var name = [
+        ["탈 라샤의 호라드릭 크레스트", 0], ["탈 라샤의 가디언쉽", 0],
+        ["탈 라샤의 리드리스 아이", 0], ["탈 라샤의 어쥬디케이션", 0],
+        ["탈 라샤의 파인-스펀 클로쓰", 0], ["트랑-울의 거즈", 1],
+        ["트랑-울의 클러스", 1], ["트랑-울의 윙", 1],
+        ["트랑-울의 스케일스", 1], ["트랑-울의 가이즈", 1],
+        ["임모틀 킹의 스톤 크러셔", 2], ["임모틀 킹의 필라", 2],
+        ["임모틀 킹의 포지", 2], ["임모틀 킹의 디테일", 2],
+        ["임모틀 킹의 소울 케이지", 2], ["임모틀 킹의 윌", 2]
+      ];
+      var timg =[
+        "tal_mask", "tal_gab", "tal_bong", "tal_amul", "tal_belt", "trang_belt", "trang_claws", "trang_wing", "trang_gab", "trang_mask", "imm_crush", "imm_boots",
+        "imm_glove", "imm_belt", "imm_gab", "imm_mask"];
+      var set = [
+        "탈 라샤의 래핑스", "트랑-울의 아바타", "임모틀 킹 불멸왕"
+      ]
+      for(var i = 0; i < name.length; i++){
+        var row = rune_table.insertRow(rune_table.rows.length);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        cell1.innerHTML = "<img src='../img/set/"+timg[i]+".gif'>";
+        cell2.innerHTML = name[i][0];
+        cell3.innerHTML = set[name[i][1]];
+        cell4.innerHTML = "<a href='set_info/"+(i+1)+".html'><button style='background-color:#00bbbb'>정보 보기</button></a>";
+      }
+      document.getElementById('result').innerHTML = "총 검색결과 "+i+"건";
+    }
+  </script>
+  <body>
+    <div id="topbar">
+      <a href="index.html" class="logo_view">DIAMO</a>
+      <input type="text" class="searchbar" placeholder="아이템 명 혹은 룬 검색">
+      <a href="view.html"><input type="button" class="searchbtn" value="검색"></a>
+      <a href="view_menu.html"><img src="../img/menubtn.png" class="menubtn"></a>
+    </div>
+    <label id="result"></label>
+    <table>
+      <tr>
+        <th style="width:100px">이미지</th>
+        <th>이름</th>
+        <th>세트명</th>
+        <th style="width:100px">상세정보</th>
+      </tr>
+      <tbody id="rune"></tbody>
+    </table>
+  </body>
+</html>

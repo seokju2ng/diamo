@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <title> DIAMO - 룬워드 상세정보 </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/h_main.css">
+  </head>
+  <style>
+    .item1 {grid-area: name;}
+    .item2 {grid-area: level;}
+    .item3 {grid-area: material;}
+    .item4 {grid-area: rune;}
+    .item5 {grid-area: option;}
+
+    .grid-container{
+      width: 650px;
+      display: grid;
+      grid-template-areas:
+        'name name'
+        'level option'
+        'material option'
+        'rune option';
+      grid-gap: 8px;
+      background-color: #ffbb00;
+      padding: 8px;
+    }
+    .grid-container > div{
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 15px;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    @media(max-width:700px){
+      .grid-container{
+        width:90%;
+      }
+    }
+    @media(max-width:600px){
+      .grid-container{
+        width:520px;
+      }
+    }
+    .rune{
+      width:30px;
+    }
+  </style>
+
+  <body>
+    <div id="topbar">
+      <a href="index.html" class="logo_view">DIAMO</a>
+      <input type="text" class="searchbar" placeholder="아이템 명 혹은 룬 검색">
+      <a href="view.html"><input type="button" class="searchbtn" value="검색"></a>
+      <a href="view_menu.html"><img src="../img/menubtn.png" class="menubtn"></a>
+    </div>
+    <a href="view_runewords.html"><button>뒤로 가기</button></a>
+    <div class="grid-container">
+      <div class="item1"><b>이름</b> 원환 (Malice)</div>
+      <div class="item2"><b>레벨제한</b><br>15</div>
+      <div class="item3"><b>재료 아이템</b><br>근접무기 3소켓</div>
+      <div class="item4"><b>필요 룬 / 순서</b><br>
+        <a href="rune_info.html"><img class="rune" src="../img/rune/6.png">아이드</a> +
+        <a href="rune_info.html"><img class="rune" src="../img/rune/1.png">엘</a> +
+        <a href="rune_info.html"><img class="rune" src="../img/rune/5.png">에드</a>
+      </div>
+      <div class="item5"><b>옵션</b><br><br>
+        +33% 증가된 데미지<br>
+        +9 최대 데미지<br>
+        100% 상처 악화<br>
+        -25% 목표물의 방어<br>
+        -100 몬스터 방어력 감소<br>
+        몬스터 회복 저지<br>
+        +50 공격 등급<br>
+        라이프 감소 -5</div>
+    </div>
+  </body>
+</html>

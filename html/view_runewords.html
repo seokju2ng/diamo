@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <title> DIAMO - 룬워드 </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/h_main.css">
+  </head>
+  <style>
+    table{
+      text-align: center;
+    }
+    td img{
+      width:30px;
+    }
+    button{
+      font-size: 15px;
+    }
+    th{
+      width:100px;
+    }
+  </style>
+  <script>
+    window.onload = function(){
+      var rune_table = document.getElementById('rune');
+      var name = ["고대인의 서약(Ancient's Pledge)",
+          "검은색(Black)", "원한(Fury)", "신성한 번개(Holy Thunder)",
+          "명예(Honor)", "왕의 자비(King's Grace)", "꽃잎(Leaf)",
+          "용맹한 자(Lionheart)", "학식(Lore)", "원환(Malice)",
+          "선율(Melody)", "기억(Memory)", "천저(Nadir)",
+          "찬란한 빛(Radiance)", "제왕운시(Rhyme)", "침묵(Silence)",
+          "연기(Smoke)", "은밀함(Stealth)", "강철(Steel)",
+          "힘(Strength)", "맹독(Venom)", "부(Wealth)",
+          "흰색(White)", "미풍(Zephyr)", "야수(Beast)"];
+      var rune = [[1,2,3],[4,6,5],[23,17,4],[24,19],[31,11],[23,7,9,18],
+        [1,2,3],[4,6,5],[10,15,9],[6,1,5],[31,11],[23,7,9,18],[6,27,22],
+        [1,2,3],[4,6,5],[19,23,17,4],[24,19],[31,11],[23,7,9,18],
+        [1,2,3],[4,6,5],[17,16,5],[24,19],[31,11],[13,7,9,10]
+        ];
+      if(rune_table.rows.length === 0){
+        for(var i = 0; i < name.length; i++){
+          var row = rune_table.insertRow(rune_table.rows.length);
+          var cell1 = row.insertCell(0);
+          var cell2 = row.insertCell(1);
+          var cell3 = row.insertCell(2);
+          var cell4 = row.insertCell(3);
+          cell1.innerHTML = i+1;
+          cell2.innerHTML = name[i];
+          for(var j = 0; j < rune[i].length; j++){
+            cell3.innerHTML += `<a href="rune_info.html"><img src="../img/rune/`+rune[i][j]+`.png"></a>`;
+          }
+          //"<img src='../img/rune/"+i+".png'>";
+          cell4.innerHTML = "<a href='runewords_info.html'><button style='background-color:#00bbbb'>정보 보기</button></a>";
+        }
+      }
+      document.getElementById('result').innerHTML = "총 검색결과 "+i+"건";
+    }
+  </script>
+  <body>
+    <div id="topbar">
+      <a href="index.html" class="logo_view">DIAMO</a>
+      <input type="text" class="searchbar" placeholder="아이템 명 혹은 룬 검색">
+      <a href="view.html"><input type="button" class="searchbtn" value="검색"></a>
+      <a href="view_menu.html"><img src="../img/menubtn.png" class="menubtn"></a>
+    </div>
+    <label id="result"></label>
+    <table>
+      <tr>
+        <th>번호</th>
+        <th style="width:280px">룬워드 이름</th>
+        <th style="width:200px">필요 룬 / 순서</th>
+        <th>상세정보</th>
+      </tr>
+      <tbody id="rune"></tbody>
+    </table>
+  </body>
+</html>

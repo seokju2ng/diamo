@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <title> DIAMO - 룬 상세정보 </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/h_main.css">
+  </head>
+  <style>
+    .item1 {grid-area: num;}
+    .item2 {grid-area: namekor;}
+    .item3 {grid-area: nameeng;}
+    .item4 {grid-area: type;}
+    .item5 {grid-area: level;}
+    .item6 {grid-area: img;}
+    .item7 {grid-area: info;}
+    .item8 {grid-area: comb;}
+    .item9 {grid-area: runewords;}
+    .grid-container{
+      width: 650px;
+      display: grid;
+      grid-template-areas:
+        'num namekor namekor nameeng type type'
+        'level img img img info info'
+        'comb comb comb comb comb runewords';
+      grid-gap: 8px;
+      background-color: #006666;
+      padding: 8px;
+    }
+    .grid-container > div{
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 15px;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    @media(max-width:700px){
+      .grid-container{
+        width:90%;
+      }
+    }
+    @media(max-width:600px){
+      .grid-container{
+        width:520px;
+      }
+    }
+  </style>
+
+  <body>
+    <div id="topbar">
+      <a href="index.html" class="logo_view">DIAMO</a>
+      <input type="text" class="searchbar" placeholder="아이템 명 혹은 룬 검색">
+      <a href="view.html"><input type="button" class="searchbtn" value="검색"></a>
+      <a href="view_menu.html"><img src="../img/menubtn.png" class="menubtn"></a>
+    </div>
+    <a href="view_rune.html"><button>뒤로 가기</button></a>
+    <div class="grid-container">
+      <div class="item1"><b>룬 번호</b><br>1</div>
+      <div class="item2"><b>이름</b><br>엘 룬</div>
+      <div class="item3"><b>영문명</b><br>El</div>
+      <div class="item4"><b>서버</b><br>스탠/래더</div>
+      <div class="item5"><b>레벨제한</b><br><br>11</div>
+      <div class="item6"><img src="../img/rune/1.png"></div>
+      <div class="item7"><b>옵션</b><br>무기: +50 공격등급, +1 시야 증가<br>
+      갑옷: +15 방어, +1 시야 증가<br>
+      방패: +15 방어, +1 시야 증가</div>
+      <div class="item8"><b>조합표</b><br>해당 룬 3개 = 엘드 룬</div>
+      <div class="item9"><b>해당 룬 사용</b><br><a href='runewords_info.html'><button style='background-color:#ffbb00; font-size:15px;'>룬워드 보기</button></a></div>
+    </div>
+  </body>
+</html>
