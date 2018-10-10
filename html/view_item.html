@@ -36,14 +36,18 @@
       <a href="index.html" class="logo_view">DIAMO</a>
       <input type="text" class="searchbar" placeholder="아이템 명 혹은 룬 검색">
       <a href="view.html"><input type="button" class="searchbtn" value="검색"></a>
-      <a href="view_menu.html"><img src="../img/menubtn.png" class="menubtn"></a>
+      <div id="menubar">
+        <img src="../img/menubtn.png" class="menubtn" onclick="menu()">
+      </div>
+      <script type="text/javascript" src="../js/menu.js"></script>
     </div>
     <div><label>등급 별로 보기</label></div>
     <div>
       <a href="view_set.html"><button class="btn">세트</button></a>
       <a href="view_unique.html"><button class="btn btn_org">유니크</button></a>
       <a href="view_runewords.html"><button class="btn btn_blue">룬워드</button></a>
-    </div><br><br>
+    </div>
+    <br><br>
     <div><label>부위 별로 보기</label></div>
     <div>
       <a href=""><button class="btn_ctgr">투구</button></a>
