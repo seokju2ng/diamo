@@ -13,22 +13,24 @@
     .item5 {grid-area: option;}
 
     .grid-container{
-      width: 650px;
+      width: 700px;
       display: grid;
       grid-template-areas:
         'name name'
         'level option'
         'material option'
         'rune option';
-      grid-gap: 8px;
-      background-color: #ffbb00;
-      padding: 8px;
-    }
+        grid-gap: 3px;
+        padding: 3px;
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: #773333;
+      }
     .grid-container > div{
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 15px;
-      margin-top: auto;
-      margin-bottom: auto;
+      border: 2px solid #553311;
+      border-radius: 5px;
+      background-color: #fff9f9;
+      padding: 1em;
     }
     @media(max-width:700px){
       .grid-container{
@@ -57,15 +59,16 @@
     </div>
     <a href="view_runewords.html"><button>뒤로 가기</button></a>
     <div class="grid-container">
-      <div class="item1"><b>이름</b> 원환 (Malice)</div>
+      <div class="item1"><b>이름</b><br> 원환 (Malice)</div>
       <div class="item2"><b>레벨제한</b><br>15</div>
       <div class="item3"><b>재료 아이템</b><br>근접무기 3소켓</div>
       <div class="item4"><b>필요 룬 / 순서</b><br>
-        <a href="rune_info.html"><img class="rune" src="../img/rune/6.png">아이드</a> +
-        <a href="rune_info.html"><img class="rune" src="../img/rune/1.png">엘</a> +
-        <a href="rune_info.html"><img class="rune" src="../img/rune/5.png">에드</a>
+        <a href="rune_info_1.html"><img class="rune" src="../img/rune/6.png">아이드</a> +
+        <a href="rune_info_1.html"><img class="rune" src="../img/rune/1.png">엘</a> +
+        <a href="rune_info_1.html"><img class="rune" src="../img/rune/5.png">에드</a>
       </div>
       <div class="item5"><b>옵션</b><br><br>
+        <font color="blue">
         +33% 증가된 데미지<br>
         +9 최대 데미지<br>
         100% 상처 악화<br>
@@ -73,7 +76,7 @@
         -100 몬스터 방어력 감소<br>
         몬스터 회복 저지<br>
         +50 공격 등급<br>
-        라이프 감소 -5</div>
+        라이프 감소 -5</font></div>
     </div>
   </body>
 </html>

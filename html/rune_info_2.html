@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <title> DIAMO - 룬 상세정보 </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/h_main.css">
+  </head>
+  <style>
+    .item1 {grid-area: num;}
+    .item2 {grid-area: namekor;}
+    .item3 {grid-area: nameeng;}
+    .item4 {grid-area: type;}
+    .item5 {grid-area: level;}
+    .item6 {grid-area: img;}
+    .item7 {grid-area: info;}
+    .item8 {grid-area: comb;}
+    .item9 {grid-area: runewords;}
+    .grid-container{
+      width: 700px;
+      display: grid;
+      grid-template-areas:
+        'num namekor namekor nameeng type type'
+        'level img img img info info'
+        'comb comb comb comb comb runewords';
+        grid-gap: 3px;
+        padding: 3px;
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: #000066;
+      }
+    .grid-container > div{
+      border: 2px solid #000044;
+      border-radius: 5px;
+      background-color: #f5f5ff;
+      padding: 1em;
+    }
+    @media(max-width:700px){
+      .grid-container{
+        width:90%;
+      }
+    }
+    @media(max-width:600px){
+      .grid-container{
+        width:520px;
+      }
+    }
+  </style>
+
+  <body>
+    <div id="topbar">
+      <a href="index.html" class="logo_view">DIAMO</a>
+      <input type="text" class="searchbar" placeholder="아이템 명 혹은 룬 검색">
+      <a href="view.html"><input type="button" class="searchbtn" value="검색"></a>
+      <div id="menubar">
+        <img src="../img/menubtn.png" class="menubtn" onclick="menu()">
+      </div>
+      <script type="text/javascript" src="../js/menu.js"></script>
+    </div>
+    <a href="view_rune.html"><button>뒤로 가기</button></a>
+    <div class="grid-container">
+      <div class="item1"><b>룬 번호</b><br>2</div>
+      <div class="item2"><b>이름</b><br>엘드 룬</div>
+      <div class="item3"><b>영문명</b><br>Eld</div>
+      <div class="item4"><b>서버</b><br>스탠/래더</div>
+      <div class="item5"><br><b>레벨제한</b><br>11</div>
+      <div class="item6"><img src="../img/rune/2.png"></div>
+      <div class="item7"><b>옵션</b><br>무기: +75% 언데드에게 주는 데미지<br>+50 언데드에 대한 공격등급<br>
+      갑옷: 15% 스태미나 소모 지연<br>
+      방패: 7% 공격 저지 성공률 증가</div>
+      <div class="item8"><b>조합표</b><br>해당 룬 3개 = <a href="rune_info_1.html">티르 룬<img src="../img/rune/3.png" style="width:20px"></a></div>
+      <div class="item9"><b>해당 룬 사용</b><br><a href='runewords_info.html'><button style='background-color:#ffbb00; font-size:15px;'>룬워드 보기</button></a></div>
+    </div>
+  </body>
+</html>

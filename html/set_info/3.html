@@ -13,25 +13,29 @@
     .item5 {grid-area: setname;}
     .item6 {grid-area: anth_set;}
     .item7 {grid-area: set_op;}
+    .item8 {grid-area: setview;}
     .grid-container{
-      width: 650px;
+      width: 700px;
       display: grid;
       grid-template-areas:
-        'name op_1'
-        'img op_1'
-        'material op_1'
-        'setname set_op'
-        'anth_set set_op'
+        'name name op_1'
+        'img img op_1'
+        'material material op_1'
+        'setname setview set_op'
+        'anth_set anth_set set_op'
         ;
-      grid-gap: 8px;
-      background-color: #55bb00;
-      padding: 8px;
+      grid-gap: 3px;
+      padding: 3px;
+      border: 2px solid black;
+      border-radius: 5px;
+      background-color: #006600;
     }
     .grid-container > div{
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 15px;
-      margin-top: auto;
-      margin-bottom: auto;
+      border: 2px solid #004400;
+      border-radius: 5px;
+      background-color: #f5fff5;
+      padding: 1em;
+
     }
     @media(max-width:700px){
       .grid-container{
@@ -47,6 +51,7 @@
       height:25px;
       width:25px;
     }
+
   </style>
 
   <body>
@@ -61,7 +66,7 @@
     </div>
     <a href="../view_set.html"><button>뒤로 가기</button></a>
     <div class="grid-container">
-      <div class="item1"><b>이름</b><br>탈 라샤의 리드리스 아이</div>
+      <div class="item1"><b>이름</b><font color="green"><br>탈 라샤의 리드리스 아이</font></div>
       <div class="item2"><b>원재료</b><br>스월링 크리스탈</div>
       <div class="item3"><img src="../../img/set/tal_bong.gif" style="width:65px"></div>
       <div class="item4"><b>옵션</b><br>
@@ -84,7 +89,7 @@
         -15% 적의 라이트닝 레지스트에 대하여 (4 아이템)<br>
         +15% 콜드 스킬 데미지에 대하여 (완성 세트)</font>
         </div>
-      <div class="item5"><b>세트명</b><br>탈 라샤의 래핑스</div>
+      <div class="item5"><br><b>세트명</b><br><br><font color="#996600">탈 라샤의 래핑스</font></div>
       <div class="item6"><font size="4">
         <a href='1.html'><img src="../../img/set/tal_mask.gif">탈 라샤의 호라드릭 크레스트</a><br><br>
         <a href='2.html'><img src="../../img/set/tal_gab.gif">탈 라샤의 가디언쉽</a><br><br>
@@ -92,12 +97,12 @@
         <a href='5.html'><img src="../../img/set/tal_belt.gif">탈 라샤의 파인-스펀 클로쓰</a>
       </font>
         </div>
-      <div class="item7"><b>세트 옵션</b><br>
+      <div class="item7"><br><b>세트 옵션</b><br><br>
         <font color="#996600">
         <b>부분 세트 보너스</b><br>
         라이프 회복 +10 (2 아이템)<br>
         65% 매직 아이템 얻을 확률 증가 (3 아이템)<br>
-        +25% 매우 빠른 회복속도 증가 (4 아이템)<br>
+        +25% 매우 빠른 회복속도 증가 (4 아이템)<br><br>
         <b>완성 세트 보너스</b><br>
         +3 모든 소서리스 스킬 레벨 상승<br>
         +25% 매우 빠른 회복속도 증가<br>
@@ -107,6 +112,7 @@
         라이프 회복 +10<br>
         모든 저항력 +50<br>
         65% 매직 아이템 얻을 확률 증가<br></font></div>
+        <div class="item8"><img src="../../img/set/tal_set.png"></div>
     </div>
   </body>
 </html>
