@@ -13,7 +13,6 @@ function menu(){
           </ul>
         </li>
         <li><a href="../view_gem.html">보석 정보</a></li>
-        <li><a href="">등등2</a></li>
       </ul>
     </span>
     `;
